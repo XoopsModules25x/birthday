@@ -1,6 +1,6 @@
 <?php
 if (!defined('XOOPS_ROOT_PATH')) {
-	die("XOOPS root path not defined");
+    die("XOOPS root path not defined");
 }
 
 $modversion['name'] = _MI_BD_TITRE;
@@ -14,8 +14,6 @@ $modversion['license_url'] = "www.gnu.org/licenses/gpl-2.0.html/";
 $modversion['official'] = 0;
 $modversion['image'] = 'images/birthday_slogo2.png';
 $modversion['dirname'] = "birthday";
-
-
 
 $modversion['dirmoduleadmin'] = '/Frameworks/moduleclasses/moduleadmin';
 $modversion['icons16'] = '../../Frameworks/moduleclasses/icons/16';
@@ -31,7 +29,6 @@ $modversion['min_xoops'] = "2.5.5";
 $modversion['min_admin'] = '1.1';
 $modversion['min_db'] = array('mysql' => '5.0.7', 'mysqli' => '5.0.7');
 
-
 // ********************************************************************************************************************
 // Administration *****************************************************************************************************
 // ********************************************************************************************************************
@@ -39,7 +36,6 @@ $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = 'admin/index.php';
 $modversion['adminmenu'] = 'admin/menu.php';
 $modversion['system_menu'] = 1;
-
 
 // ********************************************************************************************************************
 // Blocks *************************************************************************************************************
@@ -52,9 +48,8 @@ $modversion['blocks'][$cptb]['name'] = _MI_BD_TITRE;
 $modversion['blocks'][$cptb]['description'] = '_MI_BD_DESC';
 $modversion['blocks'][$cptb]['show_func'] = 'b_birthday_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_birthday_edit';
-$modversion['blocks'][$cptb]['options'] = '5';	// nombre d'éléments visibles
+$modversion['blocks'][$cptb]['options'] = '5';    // nombre d'éléments visibles
 $modversion['blocks'][$cptb]['template'] = 'birthday_block_birthday.html';
-
 
 // ********************************************************************************************************************
 // Search *************************************************************************************************************
@@ -62,7 +57,6 @@ $modversion['blocks'][$cptb]['template'] = 'birthday_block_birthday.html';
 $modversion['hasSearch'] = 1;
 $modversion['search']['file'] = 'include/search.inc.php';
 $modversion['search']['func'] = 'birthday_search';
-
 
 // ********************************************************************************************************************
 // Templates **********************************************************************************************************
@@ -81,7 +75,6 @@ $cptt++;
 $modversion['templates'][$cptt]['file'] = 'birthday_users.html';
 $modversion['templates'][$cptt]['description'] = "List of Users";
 
-
 // ********************************************************************************************************************
 // Menu ***************************************************************************************************************
 // ********************************************************************************************************************
@@ -91,7 +84,6 @@ $cptm = 0;
 $cptm++;
 $modversion['sub'][$cptm]['name'] = _MI_BIRTHDAY_USERS_LIST;
 $modversion['sub'][$cptm]['url'] = 'users.php';
-
 
 // ********************************************************************************************************************
 // Tables *************************************************************************************************************
@@ -114,7 +106,6 @@ $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 150;
-
 
 /**
  * Images height
@@ -193,14 +184,14 @@ $modversion['config'][$cpto]['default'] = 1048576;
 // $modversion['config'][$cpto]['formtype'] = 'select';
 // $modversion['config'][$cpto]['valuetype'] = 'text';
 // $modversion['config'][$cpto]['options'] = array(
-											// _MI_BIRTHDAY_FORM_DHTML=>'dhtml',
-											// _MI_BIRTHDAY_FORM_COMPACT=>'textarea',
-											// _MI_BIRTHDAY_FORM_SPAW=>'spaw',
-											// _MI_BIRTHDAY_FORM_HTMLAREA=>'htmlarea',
-											// _MI_BIRTHDAY_FORM_KOIVI=>'koivi',
-											// _MI_BIRTHDAY_FORM_FCK=>'fck',
-											// _MI_BIRTHDAY_FORM_TINYEDITOR=>'tinyeditor'
-											// );
+                                            // _MI_BIRTHDAY_FORM_DHTML=>'dhtml',
+                                            // _MI_BIRTHDAY_FORM_COMPACT=>'textarea',
+                                            // _MI_BIRTHDAY_FORM_SPAW=>'spaw',
+                                            // _MI_BIRTHDAY_FORM_HTMLAREA=>'htmlarea',
+                                            // _MI_BIRTHDAY_FORM_KOIVI=>'koivi',
+                                            // _MI_BIRTHDAY_FORM_FCK=>'fck',
+                                            // _MI_BIRTHDAY_FORM_TINYEDITOR=>'tinyeditor'
+                                            // );
 // $modversion['config'][$cpto]['default'] = 'dhtml';
 
 $cpto++;
@@ -237,9 +228,9 @@ $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'select';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['options'] = array(
-											_MI_BIRTHDAY_SORT_ORDER1 => 1,
-											_MI_BIRTHDAY_SORT_ORDER2 => 2
-											);
+                                            _MI_BIRTHDAY_SORT_ORDER1 => 1,
+                                            _MI_BIRTHDAY_SORT_ORDER2 => 2
+                                            );
 $modversion['config'][$cpto]['default'] = 2;
 
 /**
@@ -253,7 +244,6 @@ $modversion['config'][$cpto]['formtype'] = 'yesno';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 0;
 
-
 // ********************************************************************************************************************
 // Comments ***********************************************************************************************************
 // ********************************************************************************************************************
@@ -265,4 +255,3 @@ $modversion['comments']['pageName'] = 'user.php';
 $modversion['comments']['callbackFile'] = 'include/comment_functions.php';
 $modversion['comments']['callback']['approve'] = 'birthday_com_approve';
 $modversion['comments']['callback']['update'] = 'birthday_com_update';
-?>

@@ -17,13 +17,13 @@ require_once XOOPS_ROOT_PATH.'/header.php';
 require_once XOOPS_ROOT_PATH.'/class/pagenav.php';
 
 $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
-$limit = birthday_utils::getModuleOption('perpage');	// Nombre maximum d'éléments à afficher
+$limit = birthday_utils::getModuleOption('perpage');    // Nombre maximum d'éléments à afficher
 $users = array();
 
 if (isset($xoopsConfig) && file_exists(BIRTHDAY_PATH.'language/'.$xoopsConfig['language'].'/blocks.php')) {
-	require_once BIRTHDAY_PATH.'language/'.$xoopsConfig['language'].'/blocks.php';
+    require_once BIRTHDAY_PATH.'language/'.$xoopsConfig['language'].'/blocks.php';
 } else {
-	require_once BIRTHDAY_PATH.'language/english/blocks.php';
+    require_once BIRTHDAY_PATH.'language/english/blocks.php';
 }
 
 if(isset($_GET['op']) && $_GET['op'] == 'today') {    // Les utilisateurs dont l'anniversaire est aujourd'hui
@@ -59,9 +59,7 @@ $metaDescription = $pageTitle;
 $metaKeywords = '';
 birthday_utils::setMetas($pageTitle, $metaDescription, $metaKeywords);
 
-
 $path = array(BIRTHDAY_URL.'users.php' => _BIRTHDAY_USERS_LIST);
 $breadcrumb = birthday_utils::breadcrumb($path);
 $xoopsTpl->assign('breadcrumb', $breadcrumb);
 require_once XOOPS_ROOT_PATH.'/footer.php';
-?>
