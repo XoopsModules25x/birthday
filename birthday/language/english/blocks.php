@@ -10,4 +10,3 @@ define("_MB_BD_SEND2"," for his birthday.");
 define("_MB_BD_EDIT","Edit your Birthday");
 define("_MB_BIRTHDAY_MAX_ITEMS", "Maximum items count (0 = no limit)");
 define("_MB_BIRTHDAY_SHOW_MORE", "Show more birthdays");
-?>

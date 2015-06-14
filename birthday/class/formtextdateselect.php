@@ -29,7 +29,7 @@
 // Project: The XOOPS Project                                                //
 // ------------------------------------------------------------------------- //
 if (!defined('XOOPS_ROOT_PATH')) {
-	die("XOOPS root path not defined");
+    die("XOOPS root path not defined");
 }
 /**
  * @package     kernel
@@ -52,19 +52,19 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class BD_XoopsFormTextDateSelect extends XoopsFormText
 {
 
-	function BD_XoopsFormTextDateSelect($caption, $name, $size = 15, $value= 0)
-	{
-		$value = !is_numeric($value) ? time() : intval($value);
-		$this->XoopsFormText($caption, $name, $size, 25, $value);
-	}
+    function BD_XoopsFormTextDateSelect($caption, $name, $size = 15, $value= 0)
+    {
+        $value = !is_numeric($value) ? time() : intval($value);
+        $this->XoopsFormText($caption, $name, $size, 25, $value);
+    }
 
-	function render()
-	{
-    	$ele_name = $this->getName();
-		$ele_value = $this->getValue(false);
-		$jstime = formatTimestamp( $ele_value, 'F j Y, H:i:s' );
-		require_once XOOPS_ROOT_PATH.'/modules/birthday/include/calendarjs.php';
-		return "<input type='text' name='".$ele_name."' id='".$ele_name."' size='".$this->getSize()."' maxlength='".$this->getMaxlength()."' value='".date("Y-m-d", $ele_value)."'".$this->getExtra()." /><input type='reset' value=' ... ' onclick='return showCalendar(\"".$ele_name."\");'>";
-	}
+    function render()
+    {
+        $ele_name = $this->getName();
+        $ele_value = $this->getValue(false);
+        $jstime = formatTimestamp( $ele_value, 'F j Y, H:i:s' );
+        require_once XOOPS_ROOT_PATH.'/modules/birthday/include/calendarjs.php';
+
+        return "<input type='text' name='".$ele_name."' id='".$ele_name."' size='".$this->getSize()."' maxlength='".$this->getMaxlength()."' value='".date("Y-m-d", $ele_value)."'".$this->getExtra()." /><input type='reset' value=' ... ' onclick='return showCalendar(\"".$ele_name."\");'>";
+    }
 }
-?>

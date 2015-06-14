@@ -36,4 +36,3 @@ define("_BIRTHDAY_USERS_LIST","Users List");
 
 define("_BIRTHDAY_PLEASESOLVE","Please, solve this operation");
 define("_BIRTHDAY_CAPTCHA_WRONG","Sorry but the result is not the good one");
-?>

@@ -30,7 +30,6 @@ require_once BIRTHDAY_PATH . 'class/birthday_utils.php';
 //}
 $hBdUsersBirthday = xoops_getmodulehandler('users_birthday', BIRTHDAY_DIRNAME);
 
-
 // D�finition des images
 if (!defined("_BIRTHDAY_EDIT")) {
     if (!isset($xoopsConfig)) {

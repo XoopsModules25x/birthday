@@ -62,7 +62,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * default set to "1"
      *
      * @access private
-     * @var    integer $minValue The minimum range value
+     * @var integer $minValue The minimum range value
      */
     private $minValue = '1';
 
@@ -73,7 +73,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * default set to "50"
      *
      * @access private
-     * @var    integer $maxValue The maximum value of the number range
+     * @var integer $maxValue The maximum value of the number range
      */
     private $maxValue = '50';
 
@@ -85,7 +85,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * use / and * but not yet.
      *
      * @access private
-     * @var    array $operators The operations for the captcha
+     * @var array $operators The operations for the captcha
      */
     private $operators = array();
 
@@ -97,7 +97,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * numeral captcha we are about to generate.
      *
      * @access private
-     * @var    string $operator The operation's operator
+     * @var string $operator The operation's operator
      */
     private  $operator = '';
 
@@ -108,7 +108,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * that we are displaying to the user.
      *
      * @access private
-     * @var    string $operation The math operation
+     * @var string $operation The math operation
      */
     private $operation = '';
 
@@ -120,7 +120,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * to generate.
      *
      * @access private
-     * @var    integer $firstNumber The first number of the operation
+     * @var integer $firstNumber The first number of the operation
      */
     private $firstNumber = '';
 
@@ -132,7 +132,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * about to generate for the captcha.
      *
      * @access private
-     * @var    integer $secondNumber The second number of the operation
+     * @var integer $secondNumber The second number of the operation
      */
     private $secondNumber = '';
 
@@ -143,7 +143,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * we are about to do.
      *
      * @access private
-     * @var    integer $answer The mathematical operation answer value.
+     * @var integer $answer The mathematical operation answer value.
      */
     private $answer;
 
@@ -155,7 +155,6 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      */
     const TEXT_CAPTCHA_NUMERAL_COMPLEXITY_ELEMENTARY = 1;
 
-
     /**
      * A constant that indicates the complexity of mathematical operations
      *
@@ -164,7 +163,6 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      */
     const TEXT_CAPTCHA_NUMERAL_COMPLEXITY_HIGH_SCHOOL = 2;
 
-
     /**
      * A constant that indicates the complexity of mathematical operations
      *
@@ -172,8 +170,6 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      *
      */
     const TEXT_CAPTCHA_NUMERAL_COMPLEXITY_UNIVERSITY = 4;
-
-
 
     // }}}
     // {{{ Constructor
@@ -213,7 +209,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * can be bigger, smaller, etc.
      *
      * @access private
-     * @param  integer $minValue The minimum value
+     * @param integer $minValue The minimum value
      */
     private function setRangeMinimum($minValue = '1')
     {
@@ -276,12 +272,13 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      * and it will set $this->answer with it.
      *
      * @access private
-     * @param  integer $answerValue The answer value
+     * @param integer $answerValue The answer value
      * @see    $this->answer
      */
     private function setAnswer($answerValue)
     {
         $this->answer = $answerValue;
+
         return $this;
     }
     // }}}
@@ -294,11 +291,12 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
      *
      * @access private
      * @param  integer $value The first number value.
-     * @return object $this  The self object
+     * @return object  $this  The self object
      */
     private function setFirstNumber($value)
     {
         $this->firstNumber = (int)$value;
+
         return $this;
     }
     // }}}
@@ -316,6 +314,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
     private function setSecondNumber($value)
     {
         $this->secondNumber = (int)$value;
+
         return $this;
     }
     // }}}
@@ -334,6 +333,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
         $this->operation = $this->getFirstNumber() . ' ' .
                            $this->operator . ' ' .
                            $this->getSecondNumber();
+
         return $this;
     }
     // }}}
@@ -412,6 +412,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
         if ($secondNumber == 0) {
             ++$secondNumber;
             $this->doDivision($firstNumber, $secondNumber);
+
             return;
         }
 
@@ -420,6 +421,7 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
             --$secondNumber;
 
             $this->doDivision($firstNumber, $secondNumber);
+
             return;
         }
 
@@ -577,4 +579,4 @@ class birthday_Text_CAPTCHA_Numeral implements birthday_Text_CAPTCHA_Numeral_Int
     // }}}
 }
 // }}}
-?>
+;

@@ -1,6 +1,6 @@
 <?php
 if (!defined('XOOPS_ROOT_PATH')) {
-	exit();
+    exit();
 }
 require_once XOOPS_ROOT_PATH.'/language/'.$GLOBALS['xoopsConfig']['language'].'/calendar.php';
 ?>
