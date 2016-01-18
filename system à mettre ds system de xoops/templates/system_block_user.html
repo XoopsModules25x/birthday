@@ -1,0 +1,23 @@
+<table cellspacing="0">
+  <tr>
+    <td id="usermenu">
+      <{if $block.user_avatar <> ""}>
+      <center><img src="<{$xoops_url}>/uploads/<{$block.user_avatar}>" alt="" width="64" border="1" /></center>
+      <{/if}>
+	<a class="menuTop" href="<{$xoops_url}>/user.php"><{$block.lang_youraccount}></a>
+	<a class="menuTop" href="<{$xoops_url}>/modules/birthday/index.php">Mon anniversaire</a>
+      <a href="<{$xoops_url}>/notifications.php"><{$block.lang_notifications}></a>
+      <a href="<{$xoops_url}>/user.php?op=logout"><{$block.lang_logout}></a>
+      <{if $block.new_messages > 0}>
+        <a class="highlight" href="<{$xoops_url}>/viewpmsg.php"><{$block.lang_inbox}> (<span style="color:#ff0000; font-weight: bold;"><{$block.new_messages}></span>)</a>
+      <{else}>
+        <a href="<{$xoops_url}>/viewpmsg.php"><{$block.lang_inbox}></a>
+      <{/if}>
+
+      <{if $xoops_isadmin}>
+        <a href="<{$xoops_url}>/admin.php"><{$block.lang_adminmenu}></a>
+      <{/if}>
+    </td>
+  </tr>
+</table>
+
